@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  //endpoint:string = 'https://csoothsayer-ea6593c0464f.herokuapp.com/api/'
-  endpoint:string = 'http://localhost:8000/api'
+  endpoint:string = 'https://csoothsayer-ea6593c0464f.herokuapp.com/api'
+  //endpoint:string = 'http://localhost:8000/api'
   constructor(private http: HttpClient) { }
 
   postHtml(html:string):Observable<any[]>{

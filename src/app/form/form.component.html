@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papel de Parede HTML</title>
+</head>
+<body>
+    <main>
+        <div class="container mt-5">
+            <div class="d-flex flex-column align-items-center">
+                <label for="" class="page-title">SOOTHSAYER - CS MATCHES AI</label>
+                <p>Por Kiev</p>
+                <label for="">Insira abaixo o HTML da partida da HLTV</label>
+                <textarea name="" id="" cols="50" rows="5" placeholder="Match page html" #html class="form-control"></textarea>
+                <button class="btn btn-primary" (click)="predict(html.value)" [disabled]="predicting">Prever</button>
+                <p *ngIf="predicting==true">Aguarde!</p>
+                <div class="alert alert-danger" *ngIf="predic_error">
+                    {{error_str}}
+                </div>
+                <div *ngIf="predicted" class="predict-div">
+                    <table class="table table-borderless">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">{{ team1}}</th>
+                                <th scope="col">{{ team2}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img [src]="team1_logo" alt="Logo Team 1" class="img-thumbnail"></td>
+                                <td><img [src]="team2_logo" alt="Logo Team 2" class="img-thumbnail"></td>
+                            </tr>
+                            <tr *ngIf="winner==0">
+                                <td class="winner-text">Winner</td>
+                                <td class="loser-text">Loser</td>
+                            </tr>
+                            <tr *ngIf="winner==1">
+                                <td class="loser-text">Loser</td>
+                                <td class="winner-text">Winner</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>            
+        </div>         
+    </main>  
+    
+    
+</body>
+
+</html>

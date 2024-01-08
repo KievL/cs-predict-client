@@ -1,0 +1,43 @@
+button{
+    margin: 10px;
+
+}
+body {
+    margin: 0; /* Remova as margens padrão do corpo */
+    padding: 0; /* Remova o preenchimento padrão do corpo */
+    background-color: cadetblue;
+    background-size: cover; /* Cobrir toda a área do corpo */
+    background-position: center; /* Centralizar a imagem */
+    height: 100vh; /* Faz com que o corpo tenha 100% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Cor do texto para contrastar com o papel de parede */
+    font-family: 'Arial', sans-serif; /* Adicione uma fonte apropriada */
+    text-align: center; /* Centralizar o texto */
+}
+
+.img-thumbnail {
+    width: 100px;
+    height: auto;
+}
+
+.winner-text{
+    color: darkgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.loser-text{
+    color: red;
+
+}
+
+.predict-div {
+    margin-top: 10px;
+}
+
+.page-title{
+    font-size: x-large;
+    font-weight: bold;
+}
